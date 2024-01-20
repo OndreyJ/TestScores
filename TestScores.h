@@ -1,12 +1,13 @@
 #ifndef TESTSCORES_H
 #define TESTSCORES_H
+#include <string>
 
 const int MAX = 3;
 
 class TestScores {
 private:
     int grades[MAX];
-    int average;
+    double average;
 
 public:
     TestScores()
@@ -15,17 +16,17 @@ public:
             grades[i] = 0;
         }
     }
-    int getAverage()
+    double getAverage()
     {
         for (int i = 0; i < MAX; i++) {
             average += grades[i];
         }
         return (average /= MAX);
     }
-    void setGrades(int* inputGrades)
+    void setGrades(std::string* inputGrades)
     {
         for (int i = 0; i < MAX; i++) {
-            grades[i] = inputGrades[i];
+            grades[i] = stoi(inputGrades[i]);
         }
     }
 };
