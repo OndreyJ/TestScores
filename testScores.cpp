@@ -1,4 +1,5 @@
 #include "TestScores.h"
+
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -6,8 +7,7 @@
 void getScores(std::string*);
 void outputScores(double);
 
-int main()
-{
+int main() {
     double average = 0;
     std::string scores[MAX];
     TestScores classroom;
@@ -20,8 +20,7 @@ int main()
     return 0;
 }
 
-void getScores(std::string* scores)
-{
+void getScores(std::string* scores) {
     bool falseResponse = true;
 
     for (int i = 0; i < MAX; i++) {
@@ -52,8 +51,7 @@ void getScores(std::string* scores)
     return;
 }
 
-void outputScores(double average)
-{
+void outputScores(double average) {
     std::cout << "\n\nThe Average for the class is: " << std::fixed << std::setprecision(2) << average << "%\n\n";
     return;
 }

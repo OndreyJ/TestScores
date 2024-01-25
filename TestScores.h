@@ -10,21 +10,18 @@ private:
     double average;
 
 public:
-    TestScores()
-    {
+    TestScores() {
         for (int i = 0; i < MAX; i++) {
             grades[i] = 0;
         }
     }
-    double getAverage()
-    {
+    double getAverage() {
         for (int i = 0; i < MAX; i++) {
             average += grades[i];
         }
         return (average /= MAX);
     }
-    void setGrades(std::string* inputGrades)
-    {
+    void setGrades(std::string* inputGrades) {
         for (int i = 0; i < MAX; i++) {
             grades[i] = stoi(inputGrades[i]);
         }
